@@ -1,0 +1,294 @@
+/* Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Global background */
+body {
+  background: linear-gradient(
+    to right,
+    rgba(26, 32, 44, 0.95),
+    rgba(45, 55, 72, 0.95),
+    rgba(0, 0, 0, 0.95)
+  );
+  color: #ff6347;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+  max-width: 1200px; /* Added max-width for better control */
+  min-height: 300px;
+  height: 100%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.18);
+  border: white 1px solid;
+  margin: 0 auto; /* Center the container */
+}
+
+/* App Header */
+.app-header {
+  background: linear-gradient(to right, #a78bfa, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 0.5rem;
+  background-color: #4b5563;
+  margin-top: -100px;
+  padding-block: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* App Header Text */
+.app-header-text {
+  background: linear-gradient(to right, #a78bfa, #f472b6, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2b6cb0;
+}
+
+/* Section */
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+caption {
+  margin-block: 20px;
+  color: blueviolet;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+
+@media (min-width: 300px) and (max-width: 368px) {
+  .body {
+    padding: 100px;
+    border: red solid 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  .pagination button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
+  /* Center the app header for smaller screens */
+  .app-header {
+    margin-top: 0;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Reduce padding for smaller screens */
+  .main-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    padding: 8px;
+  }
+
+  table {
+    font-size: 0.75rem;
+  }
+
+  .pagination button {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  /* Adjust app header */
+  .app-header {
+    margin-top: 0;
+    padding: 15px;
+  }
+
+  /* Small text in tables */
+  .product-table th,
+  .product-table td {
+    padding: 6px 10px;
+  }
+}
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Pagination Button */
+.pagination-button {
+  background-color: #60a3d9;
+  color: white;
+  border: none;
+  padding: 7.5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Disabled Pagination Button */
+.pagination-button:disabled {
+  background-color: #d1d8e0;
+  cursor: not-allowed;
+}
+
+/* Hover effect for pagination buttons */
+.pagination-button:hover:not(:disabled) {
+  background-color: #4a8a9e;
+  transform: scale(1.05);
+}
+
+/* Active page styling */
+.pagination-button.active {
+  background-color: #56c1a5;
+  font-weight: bold;
+  color: white;
+}
+
+/* Active page hover effect */
+.pagination-button.active:hover {
+  background-color: #47b596;
+}
+
+/* Icon style */
+.pagination-button svg {
+  font-size: 1rem;
+}
+
+/* Pagination Button Responsive */
+@media (max-width: 768px) {
+  .pagination-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Table Styles */
+.product-table {
+  width: 100%;
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensure table occupies full width */
+}
+
+/* Table Header */
+.product-table thead {
+  background-color: #111827;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border: 1px solid #e5e7eb;
+}
+
+/* Table Header Cells */
+.product-table th {
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+/* Active Table Header */
+.product-table th.active {
+  background: linear-gradient(to right, #38b2ac, #2d3748);
+  color: #ffffff;
+}
+
+.product-table tbody {
+  height: 250px;
+}
+
+/* Table Row Styling */
+.product-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.product-table tbody tr:hover {
+  background-color: #4b5563;
+  color: #ffffff;
+}
+
+.product-table tbody tr.disabled {
+  background-color: rgba(55, 65, 81, 0.9);
+  color: #6b7280;
+  pointer-events: none;
+}
+
+/* Table Data */
+.product-table td {
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  font-weight: 800;
+}
+
+/* No Data Message */
+.product-table tfoot td {
+  text-align: center;
+  padding: 16px;
+  color: #ffffff;
+}
+
+/* Accessibility */
+.sr-only {
+  color: white;
+}
