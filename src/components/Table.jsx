@@ -29,8 +29,8 @@ const Table = ({ data, s_no }) => {
           ) => (
             <tr key={index}>
               <td>{s_no + index + 1}</td>
-              <td>{percentageFunded} %</td>
-              <td>{amountPledged + ' ' + currency.toUpperCase()}</td>
+              <td>{percentageFunded}</td>
+              <td>{amountPledged}</td>
             </tr>
           )
         )}
